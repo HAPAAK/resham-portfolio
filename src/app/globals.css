@@ -1,0 +1,156 @@
+/* Font Face Definitions */
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/Telegraf-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/Telegraf-Medium.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telegraf';
+  src: url('/fonts/Telegraf-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+@layer base {
+  :root {
+    /* Creamy white background */
+    --background: 40 20% 97%;
+    /* New default text color #808e57 */
+    --foreground: 75 24% 45%;
+    --card: 40 25% 99%;
+    --card-foreground: 75 24% 45%;
+    --popover: 40 25% 99%;
+    --popover-foreground: 75 24% 45%;
+    /* Olive green primary - Adjusted to match if desired, or kept distinct */
+    --primary: 75 20% 40%;
+    --primary-foreground: 40 20% 97%;
+    /* Mild green secondary */
+    --secondary: 80 25% 85%;
+    --secondary-foreground: 75 20% 25%;
+    --muted: 75 15% 90%;
+    --muted-foreground: 75 10% 45%;
+    --accent: 80 30% 75%;
+    --accent-foreground: 75 20% 25%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 20% 97%;
+
+    /* Warning color (Yellow/Orange) */
+    --warning: 38 92% 50%;
+    --warning-foreground: 40 20% 97%;
+
+    /* Black color for white modes. */
+    --primary-dark: 213 14% 15%; /* #21262c */
+    --secondary-dark: 211 14% 35%; /* #4d5966 */
+    --muted-dark: 211 14% 35%; /* Same as secondary-dark for now unless specified */
+
+    --border: 75 15% 85%;
+    --input: 75 15% 90%;
+    --ring: 75 20% 40%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 213 14% 15%;
+    --foreground: 0 0% 100%; /* White */
+
+    --card: 213 14% 18%; /* Slightly lighter than bg */
+    --card-foreground: 0 0% 100%; /* White */
+
+    --popover: 213 14% 18%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Keep Primary BUTTON color same as light mode (#808e57 / 75 20% 40%) */
+    --primary: 75 20% 40%;
+    --primary-foreground: 40 20% 97%;
+
+    --secondary: 80 25% 85%;
+    --secondary-foreground: 75 20% 25%;
+
+    --muted: var(--muted-dark);
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 80 30% 75%;
+    --accent-foreground: 75 20% 25%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --primary-dark: 0 0% 100%;
+    --secondary-dark: 80 25% 85%;;
+
+    --border: 211 14% 35%;
+    --input: 211 14% 35%;
+    --ring: 211 14% 35%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10px; /* No padding needed - nav floats over sections */
+    overflow-x: hidden;
+  }
+  
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: Telegraf, Arial, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Parallax effect - About section stays sticky, card container slides over */
+  /* Using fixed position for stronger enforcement if sticky isn't working */
+  @media (min-height: 700px) {
+    #about {
+      position: sticky;
+      top: 0;
+      z-index: 0;
+      height: 100vh;
+    }
+  }
+
+  /* Larger text sizes */
+  p {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+  }
+  h1 {
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem; /* 40px */
+  }
+  h2 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+  }
+  h3 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+  }
+}

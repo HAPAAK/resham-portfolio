@@ -1,0 +1,118 @@
+.skillsContainer {
+  position: relative;
+  perspective: 1000px;
+}
+
+.tabsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tabButton {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.tabButton:hover {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--accent));
+  border-color: hsl(var(--accent));
+  transform: translateY(-2px);
+}
+
+.tabButtonActive {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+}
+
+/* Mobile Navigation for Tabs */
+.mobileSelectWrapper {
+  display: none; 
+}
+
+.mobileSelect {
+  display: none;
+}
+
+.mobileSelectArrow {
+  display: none;
+}
+
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 200px; /* Prevent layout shift */
+  align-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .tabsContainer {
+    display: none; /* Hide tabs on mobile */
+  }
+  .skillsGrid {
+      display: none; /* Hide default grid on mobile */
+  }
+}
+
+.skillItem {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  color: hsl(var(--card-foreground));
+  cursor: default;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Animation for entering skills */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateSkill {
+  animation: fadeInUp 0.5s ease backwards;
+}
+
+.mobileSkillCard {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
