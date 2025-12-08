@@ -46,8 +46,10 @@ All colors MUST be HSL.
     /* Mild green secondary */
     --secondary: 80 25% 85%;
     --secondary-foreground: 75 20% 25%;
-    --muted: 75 15% 90%;
-    --muted-foreground: 75 10% 45%;
+
+    --muted: 213 14% 15%;
+    --muted-foreground: 213 14% 15%;
+
     --accent: 80 30% 75%;
     --accent-foreground: 75 20% 25%;
     --destructive: 0 70% 50%;
@@ -56,11 +58,6 @@ All colors MUST be HSL.
     /* Warning color (Yellow/Orange) */
     --warning: 38 92% 50%;
     --warning-foreground: 40 20% 97%;
-
-    /* Black color for white modes. */
-    --primary-dark: 213 14% 15%; /* #21262c */
-    --secondary-dark: 211 14% 35%; /* #4d5966 */
-    --muted-dark: 211 14% 35%; /* Same as secondary-dark for now unless specified */
 
     --border: 75 15% 85%;
     --input: 75 15% 90%;
@@ -85,8 +82,8 @@ All colors MUST be HSL.
     --secondary: 80 25% 85%;
     --secondary-foreground: 75 20% 25%;
 
-    --muted: var(--muted-dark);
-    --muted-foreground: 215 20% 65%;
+    --muted: var(--foreground);
+    --muted-foreground:  0 0% 100%;
 
     --accent: 80 30% 75%;
     --accent-foreground: 75 20% 25%;
@@ -96,9 +93,6 @@ All colors MUST be HSL.
 
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
-
-    --primary-dark: 0 0% 100%;
-    --secondary-dark: 80 25% 85%;;
 
     --border: 211 14% 35%;
     --input: 211 14% 35%;

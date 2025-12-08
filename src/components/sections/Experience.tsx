@@ -62,7 +62,7 @@ const Experience = () => {
                     {exp.responsibilities.map((resp, idx) => (
                       <li 
                         key={idx} 
-                        className="flex items-start gap-2 text-base text-primaryDark leading-relaxed"
+                        className="flex items-start gap-2 text-base text-muted-foreground leading-relaxed"
                       >
                         <span className="text-base mt-0.5">•</span>
                         <span>{parseTextWithHTMLTags(resp)}</span>

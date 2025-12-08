@@ -21,7 +21,7 @@ export function parseTextWithHTMLTags(text: string): React.ReactNode {
     } else if (part === "</b>") {
       if (currentText) {
         elements.push(
-          <span key={`bold-${index}`} className="font-bold text-secondaryDark">
+          <span key={`bold-${index}`} className="font-bold text-muted-foreground">
             {currentText}
           </span>
         );

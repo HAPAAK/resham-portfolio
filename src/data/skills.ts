@@ -28,40 +28,39 @@ export const skillCategories: SkillCategory[] = [
   {
     category: "Backend Development",
     skills: [
-      { name: "Microservices"},
       { name: "REST API's"},
-      { name: "Database Design"},
       { name: "Webhooks"},
+      { name: "sFTP"},
       { name: "Quartz Scheduler"},
       { name: "SFTP"},
+      { name: "JWT"},
+      { name: "Gradle"},
       { name: "PrismaORM"},
+    ],
+  },
+    {
+    category: "Cloud and Infrastructure",
+    skills: [
+      { name: "AWS"},
+      { name: "Docker"},
+      { name: "MySQL"},
+      { name: "PostgreSQL"},
+      { name: "MongoDB"},
+      { name: "GitHub Actions (CI/CD)"},
+      { name: "Message Broker(SQS)"}
     ],
   },
   {
     category: "Tools and Utilities",
     skills: [
       { name: "Git"},
+      { name: "Sentry"},
       { name: "Splunk"},
       { name: "SonarQube"},
       { name: "Snyk"},
       { name: "VS Code"},
       { name: "Postman"},
-      { name: "Jira"},
-      { name: "Confluence"},
-    ],
-  },
-  {
-    category: "Cloud and Infrastructure",
-    skills: [
-        { name: "Docker"},
-      { name: "AWS"},
-      { name: "MySQL"},
-      { name: "PostgreSQL"},
-      { name: "MongoDB"},
-      { name: "GitHub Actions (CI/CD)"},
-      { name: "SQL"},
-      { name: "SNS"},
-      { name: "SQS"},
+      { name: "Jira"}
     ],
   },
   {

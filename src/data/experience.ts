@@ -55,12 +55,13 @@ export const experiences: Experience[] = [
     companyUrl: "https://www.chargebee.com",
     period: "January 2023 - July 2023",
     responsibilities: [
-      `Co-developed an internal tool for <b>feature usage metrics and visibility</b> across accounting integrations, 
-      reducing PM overhead and <b>saving hours of manual analysis and decision making</b>.`,
+      `Co-developed an internal tool for <b>feature usage metrics and visibility </b>across configuration setting for 
+      accounting integrations, empowering team to focus development on high impact areas <b>saving hours of manual analysis and 
+      decision making.</b>`,
 
-      `Co-developed a full-stack, SSO-enabled internal <b>data browser</b> with IAM controls, reducing 
-      provisioning time by over <b>90% (from hours to minutes)</b> and enabling engineering teams to access 
-      masked, multi-database environments instantly.`
+      `Co-developed a full-stack, SSO-enabled, <b>database-agnostic</b> internal data browser with IAM controls, significantly
+      reducing provisioning time by over <b>90% (from hours to minutes)</b> and enabling engineering teams to access masked, 
+      multi-database environments instantly. `
     ],
   }
 ];

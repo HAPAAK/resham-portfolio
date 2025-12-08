@@ -81,7 +81,7 @@ export function NavLink({ to, children }: NavLinkProps) {
       onClick={handleClick}
       className={`text-xs md:text-sm font-medium transition-all duration-300 px-2 py-1.5 md:px-4 md:py-2 rounded-full ${
         isActive 
-          ? "bg-background/70 text-foreground font-semibold shadow-sm backdrop-blur-sm" 
+          ? "bg-background/70 text-muted-foreground font-semibold shadow-sm backdrop-blur-sm" 
           : "text-primary-foreground/80 hover:bg-primary/20 hover:text-primary-foreground"
       }`}
     >
